@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./styles/SignIn.css"
 import { useAuth } from '../providers/AuthContext';
-import axios from 'axios';
+import api from '../api';
 
 function SignIn() {
   const [name,setName]=useState("");
@@ -39,7 +39,7 @@ function SignIn() {
 
 
     try {
-      const userData=await axios.post("http://localhost:5000/user",{name,email,password})
+      const userData = await api.post("/user", { name, email, password })
       const user={name:userData.data.name,token:userData.data.token};
       context?.setUser(user)
       context?.setAuthenticated(true);

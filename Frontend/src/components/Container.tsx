@@ -3,7 +3,7 @@ import "./styles/Container.css"
 import { Link } from 'react-router-dom'
 import icons from '../providers/images'
 import Note from './Note'
-import axios from 'axios'
+import api from '../api'
 import { useAuth } from '../providers/AuthContext.tsx'
 import SignIn from './SignIn'
 import Loading from './Loading.tsx'
@@ -44,7 +44,7 @@ function Container() {
         context?.setAuthenticated(true);
       }
 
-      const mdata =await axios.get("http://localhost:5000/data",{
+      const mdata = await api.get("/data", {
         headers: {
         authorization: `Bearer ${user1}`,
       }
@@ -112,7 +112,7 @@ function Container() {
 
   async function delNote(item:any){
      try {
-        const updated = await axios.delete("http://localhost:5000/data", {
+        const updated = await api.delete("/data", {
           data: { id: item._id },
           headers: {
           authorization: `Bearer ${context?.user?.token}`,
@@ -128,7 +128,7 @@ function Container() {
 
   async function toggleFavo(item:any){
      try {
-        const updated =await axios.put("http://localhost:5000/data",{
+        const updated = await api.put("/data", {
           id:item._id,
           title:item.title,
           body:item.body,
