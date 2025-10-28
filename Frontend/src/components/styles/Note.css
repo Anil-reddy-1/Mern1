@@ -1,0 +1,93 @@
+.main-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0000005b;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.Note-container{
+    width: 50%;
+    height: 87%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--bg-secondary);
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #5e5e5e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.x{
+    align-self: flex-end;
+    position: relative;
+    top: -25px;
+    right: -14px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 5px;
+    background-color: var(--error-color);
+    color:#ffffff;
+    transition: background-color 0.3s ease;
+}
+.x:hover{
+        background-color: #f16666;
+        color: #ffffff;
+}
+.x::after{
+    background-color: var(--error-color);
+}
+
+
+.save-btn{
+    width: 30%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+
+    background-color: #fbc653;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover{
+    
+    background-color: #f7ca67;
+}
+.Note-container input{
+    font-weight: 700;
+}
+.Note-container input{
+    margin-top: 10px;
+}
+.Note-container input, .Note-container textarea{
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    border-color: var(--button-hover);
+}

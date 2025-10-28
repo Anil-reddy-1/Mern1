@@ -1,0 +1,33 @@
+:root{
+    --bg-primary: #F9FAFB;
+  --bg-secondary: #FFFFFF;
+  --accent-color: #3B82F6;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --border-color: #E5E7EB;
+  --sidebar-bg: #F3F4F6;
+  --button-hover: #60A5FA;
+  --favorite-star: #FACC15;
+  --error-color: #EF4444;
+}
+
+body.dark-mode {
+  --bg-primary: #111827;
+  --bg-secondary: #1F2937;
+  --accent-color: #3B82F6;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --border-color: #374151;
+  --sidebar-bg: #0F172A;
+  --button-hover: #60A5FA;
+  --favorite-star: #FACC15;
+  --error-color: #F87171;
+}
+
+:root{
+    background-color: var(--bg-primary);
+}
+
+button{
+  z-index: 9;
+}

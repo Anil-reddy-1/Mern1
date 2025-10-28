@@ -1,0 +1,89 @@
+.main-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0000005b;
+    z-index: 10000;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+}
+.sign-in-container{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--bg-secondary);
+    padding: 40px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #5e5e5e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sign-in-container h2{
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.input label{
+    margin-bottom: 8px;
+    padding: 4px;
+    font-weight: 500;
+    color: #191919;
+}
+
+.input input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.input input:focus{
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.sign-in-container button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.sign-in-container button:hover{
+    background-color: var(--button-hover);
+}
+.sign-in-container button:active{
+    background-color: var(--accent-color);
+}
+
+.error{
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+
