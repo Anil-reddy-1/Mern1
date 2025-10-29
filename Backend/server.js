@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 const userRoute=require("./routes/user.js")
 const dataRoute=require("./routes/data.js")
 
-
+const PORT = process.env.PORT || 5000;
 app.use(cors({origin:"http://localhost:5173",credentials:true}))
 app.use(express.json()); 
  
@@ -20,7 +20,7 @@ app.get('/',(req,res)=>{
 mongoose.connect(process.env.DATABASE_URL)
 .then((res)=>{
     console.log("Conected to dataBase")
-    app.listen(5000,()=>{
+    app.listen(PORT,()=>{
     console.log("Listenting ... ")  
     })
 })    
