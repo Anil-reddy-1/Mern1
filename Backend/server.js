@@ -17,6 +17,13 @@ app.get('/',(req,res)=>{
 })
  
 
+
+if (!process.env.DATABASE_URL) {
+    console.error("DATABASE_URL is not defined");
+    process.exit(1);
+}
+
+
 mongoose.connect(process.env.DATABASE_URL)
 .then((res)=>{
     console.log("Conected to dataBase")
