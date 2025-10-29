@@ -7,14 +7,9 @@ import api from '../api'
 import { useAuth } from '../providers/AuthContext.tsx'
 import SignIn from './SignIn'
 import Loading from './Loading.tsx'
+import type Data from '../providers/types.ts'
 
-type Data = {
-  _id: string,
-  id: String,
-  title: String,
-  body: String,
-  favorite: boolean,
-}
+
 
 function Container() {
   const [data, setData] = useState<Data[] | []>();
@@ -203,7 +198,7 @@ function Container() {
       </div>
       {!context?.isAuthenticated && <SignIn />}
       {loading && <Loading />}
-      {visData && <Note visData={visData} setVisData={setVisData} data={data} setChange={setChange} />}
+      {visData && <Note visData={visData} setVisData={setVisData}  setChange={setChange} />}
     </>
 
   )

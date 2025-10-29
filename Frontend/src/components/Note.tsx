@@ -2,22 +2,17 @@ import  {  useState } from 'react'
 import "./styles/Note.css"
 import { useAuth } from '../providers/AuthContext';
 import api from '../api';
-
-// type Data={
-//   id:String,
-//   tittle:String,
-//   body:String,
-//   favorite:boolean,
-// }
-
-// type prop={
-// visData:Data|undefined,
-// setVisData:React.Dispatch<React.SetStateAction<Data|undefined>>,
-// data:Data[]|undefined,
-// }
+import type Data from '../providers/types';
 
 
-function Note(props: any) {
+interface NoteProps {
+  visData: Data | undefined;
+  setVisData: React.Dispatch<React.SetStateAction<Data | undefined>>;
+  setChange: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+
+function Note(props:NoteProps) {
   const [title, setTitle] = useState(props.visData?.title);
   const [body, setBody] = useState(props.visData?.body);
   const context = useAuth();
