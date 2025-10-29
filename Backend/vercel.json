@@ -12,9 +12,6 @@
       "dest": "index.js",
       "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
     }
-  ],
-  "env": {
-    "DATABASE_URL": "@DATABASE_URL",
-    "TOKEN_KEY": "@TOKEN_KEY"
-  }
+  ]
+ 
 }
