@@ -47,16 +47,12 @@ function SignIn() {
       console.log(context?.user);
 
     } catch (error: any) {
-      if (error.response) {
+      if (error.response.data.message) {
         setError(error.response.data.message.toString())
       } else setError("something went wrong")
     }
 
   }
-
-
-
-
 
 
   return (
