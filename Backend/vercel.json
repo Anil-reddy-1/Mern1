@@ -14,7 +14,7 @@
     }
   ],
   "env": {
-    "DATABASE_URL": "@database_url",
-    "TOKEN_KEY": "@token_key"
+    "DATABASE_URL": "@DATABASE_URL",
+    "TOKEN_KEY": "@TOKEN_KEY"
   }
 }
