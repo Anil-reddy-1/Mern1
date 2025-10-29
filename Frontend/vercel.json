@@ -4,19 +4,17 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "buildCommand": "npm run build",
-        "outputDirectory": "dist"
-      }
+      "config": { "distDir": "dist" }
     }
   ],
   "routes": [
     {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/index.html"
     }
-  ],
-  "env": {
-    "VITE_API_URL": "@api_url"
-  }
+  ]
 }
