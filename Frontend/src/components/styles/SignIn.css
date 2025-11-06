@@ -1,4 +1,4 @@
-.main-card{
+.main-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,26 +12,28 @@
     top: 0;
     left: 0;
 }
-.sign-in-container{
+
+.sign-in-container {
     width: 50%;
     height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:var(--bg-secondary);
+    background-color: var(--bg-secondary);
     padding: 40px;
     font-size: 1.2rem;
     border-radius: 8px;
     border: 1px solid #5e5e5e;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.sign-in-container h2{
+
+.sign-in-container h2 {
     margin-bottom: 20px;
     color: #333;
 }
 
-.input{
+.input {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -41,14 +43,14 @@
     border-radius: 4px;
 }
 
-.input label{
+.input label {
     margin-bottom: 8px;
     padding: 4px;
     font-weight: 500;
     color: #191919;
 }
 
-.input input{
+.input input {
     width: 100%;
     padding: 10px;
     border: 1px solid #a9a9a9;
@@ -56,12 +58,12 @@
     font-size: 1rem;
 }
 
-.input input:focus{
+.input input:focus {
     outline: none;
     border-color: var(--accent-color);
 }
 
-.sign-in-container button{
+.sign-in-container button {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: var(--accent-color);
@@ -72,18 +74,46 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.sign-in-container button:hover{
+
+.sign-in-container button:hover {
     background-color: var(--button-hover);
 }
-.sign-in-container button:active{
+
+.sign-in-container button:active {
     background-color: var(--accent-color);
 }
 
-.error{
+.error {
     color: red;
     margin-top: 10px;
     font-size: 0.9rem;
 }
 
+@media screen and (max-width: 600px) {
+    .sign-in-container {
+        width: 80%;
+        height: 40%;
+        font-size: 12px;
+        margin: 10px;
+    }
 
+    .input input {
+        font-size: 12px;
+        padding: 6px;
 
+    }
+
+    .input label {
+        margin-bottom: 4px;
+        padding: 2px;
+
+    }
+    .input {
+        padding: 6px;
+    }
+    .sign-in-container button {
+        margin-top: 5px;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,4 +1,4 @@
-.main-card{
+.main-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,14 +11,15 @@
     top: 0;
     left: 0;
 }
-.Note-container{
+
+.Note-container {
     width: 50%;
     height: 87%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:var(--bg-secondary);
+    background-color: var(--bg-secondary);
     padding: 20px;
     font-size: 1.2rem;
     border-radius: 8px;
@@ -27,7 +28,7 @@
 }
 
 
-.x{
+.x {
     align-self: flex-end;
     position: relative;
     top: -25px;
@@ -38,19 +39,21 @@
     padding: 2px 8px;
     border-radius: 5px;
     background-color: var(--error-color);
-    color:#ffffff;
+    color: #ffffff;
     transition: background-color 0.3s ease;
 }
-.x:hover{
-        background-color: #f16666;
-        color: #ffffff;
+
+.x:hover {
+    background-color: #f16666;
+    color: #ffffff;
 }
-.x::after{
+
+.x::after {
     background-color: var(--error-color);
 }
 
 
-.save-btn{
+.save-btn {
     width: 30%;
     padding: 10px;
     margin-top: 15px;
@@ -65,17 +68,18 @@
     transition: background-color 0.3s ease;
 }
 
-.save-btn:hover{
-    
+.save-btn:hover {
+
     background-color: #f7ca67;
 }
-.Note-container input{
+
+.Note-container input {
     font-weight: 700;
-}
-.Note-container input{
     margin-top: 10px;
 }
-.Note-container input, .Note-container textarea{
+
+.Note-container input,
+.Note-container textarea {
     width: 90%;
     margin: 10px 0;
     padding: 10px;
@@ -87,7 +91,32 @@
     color: var(--text-primary);
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus {
     outline: none;
     border-color: var(--button-hover);
+}
+
+@media screen and (max-width: 600px) {
+    .Note-container {
+        width: 80%;
+        height: 60%;
+        font-size: 12px;
+    }
+
+    .x {
+        font-size: 1rem;
+    }
+
+    .save-btn {
+        width: 40%;
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    .Note-container input,
+    .Note-container textarea {
+        font-size: 12px;
+        border-color: var(--button-hover);
+    }
 }

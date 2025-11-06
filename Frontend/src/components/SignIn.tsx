@@ -37,7 +37,7 @@ function SignIn() {
       return;
     }
 
-
+ 
     try {
       const userData = await api.post("/user", { name, email, password })
       const user = { name: userData.data.name, token: userData.data.token };
