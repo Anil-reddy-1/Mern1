@@ -6,7 +6,6 @@ const {User}=require("../models/user.model.js")
 router.post("/",PostUser);
 router.get("/",async (req,res)=>{
     try {
-        
         const data=await User.find({});
         res.json({data:data})
     } catch (error) {
