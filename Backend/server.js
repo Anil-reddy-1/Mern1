@@ -12,7 +12,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'https://my-note-frontend-gamma.vercel.app'  // Remove trailing slash
+    'https://my-note-frontend-gamma.vercel.app'  
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
