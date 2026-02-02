@@ -13,6 +13,13 @@ async function GetData(req,res) {
 
 async function CreateData(req,res) {
     try {
+        const time = new Date(Date.now()-60*1000)
+        const count = await Data.countDocuments({id:req.user.id,createdAt:{$gte:time}})
+        console.log(count);
+        if(count>=5){
+            res.status(429).json({message:"creation limit reached please try again later"})
+            return;
+        }
         const {title,body,favorite=false}=req.body;
         const data=await Data.create({id:req.user.id,title:title,body:body,favorite:favorite});
         res.status(200).json({message:"Created item successfully",data:data})
